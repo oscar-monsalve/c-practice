@@ -1,20 +1,33 @@
 #include <stdio.h>
+#include "04_resistor.h"
 
-typedef enum {
-    BLACK = 0,
-    BROWN = 1,
-    RED = 2,
-    ORANGE = 3,
-    YELLOW = 4,
-    GREEN = 5,
-    BLUE = 6,
-    VIOLET = 7,
-    GREY = 8,
-    WHITE = 9
-} resistor_band_t;
 
-int color_code(resistor_band_t color) {
-    return color;
+int color_code(resistor_band_t color_name) {
+    switch (color_name){
+        case BLACK:
+            return 0;
+        case BROWN:
+            return 1;
+        case RED:
+            return 2;
+        case ORANGE:
+            return 3;
+        case YELLOW:
+            return 4;
+        case GREEN:
+            return 5;
+        case BLUE:
+            return 6;
+        case VIOLET:
+            return 7;
+        case GREY:
+            return 8;
+        case WHITE:
+            return 9;
+        default:
+            printf("No color provided\n");
+            break;
+    }
 }
 
 resistor_band_t colors(void) {
@@ -26,4 +39,3 @@ int main() {
 
     return 0;
 }
-
