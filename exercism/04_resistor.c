@@ -1,3 +1,4 @@
+#include <iterator>
 #include <stdio.h>
 #include "04_resistor.h"
 
@@ -30,12 +31,16 @@ int color_code(resistor_band_t color_name) {
     }
 }
 
-resistor_band_t colors(void) {
-}
+// resistor_band_t colors(void) {
+//     for (int i = 0; i <= std::size(resistor_band_t); i++) {
+//     }
+// }
 
 int main() {
-    int color_value = color_code(BLACK);
+    int color_value = color_code(WHITE);
     printf("%d\n", color_value);
+
+    printf("%lu\n", sizeof(resistor_band_t));
 
     return 0;
 }
